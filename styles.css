@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg: #fffcf0;
+    /* Keeping the warm tint for eye strain as previously requested */
+    --text: #1c1c1a;
+    --text-muted: #6e6e66;
+    --border: rgba(0, 0, 0, 0.08);
+    --font-serif: 'Crimson Pro', serif;
+    /* Claude-like serif font */
+    --font-sans: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-serif);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Changed from 'left' to 'center' for better vertical alignment */
+    padding: 2rem;
+    max-width: 100%;
+    /* Changed from 'full' to '100%' */
+    margin: 0 auto;
+    background: transparent;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(28, 28, 26, 0.1);
+    /* Semi-transparent line */
+}
+
+.brand {
+    font-size: 1.70rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.nav-right {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--text);
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.post-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: var(--text);
+    transition: opacity 0.2s ease;
+}
+
+.post-title a:hover {
+    opacity: 0.7;
+}
+
+.post-excerpt {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.post-preview {
+    margin-bottom: 4rem;
+}
+
+.post-image-container {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.post-featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 450px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
